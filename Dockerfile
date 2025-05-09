@@ -7,9 +7,8 @@ WORKDIR /app
 # Copy application files
 COPY app.py /app/
 
-# Copy dependency requirements
-COPY requirements.txt /app/
-RUN pip install -r requirements.txt
+# Install flask
+RUN pip install flask
 
 # Make port 5000 available
 EXPOSE 5000
