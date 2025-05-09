@@ -1,7 +1,7 @@
 provider "docker" {}
 
 resource "docker_image" "flask_app" {
-  name         = "flask-app"
+  name = "flask-app"
   build {
     context    = "."
     dockerfile = "Dockerfile"
