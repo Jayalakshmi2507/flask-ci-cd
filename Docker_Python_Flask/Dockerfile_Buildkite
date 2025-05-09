@@ -1,0 +1,7 @@
+FROM buildkite/agent:latest
+
+# Set Buildkite token (Replace with your actual token)
+ENV BUILDKITE_AGENT_TOKEN="bkct_MTAyMzA0.mnvUkyxV6vLgecb2XrDo4c5h4eGAqE4VT7GwNXyqGRSmGUqeEcKCzMbAVi4eGkDctscXQ8ko"
+
+# Start Buildkite agent
+CMD ["buildkite-agent", "start"]
