@@ -1,0 +1,12 @@
+steps:
+  - label: "Build Docker Image"
+    command:
+      - docker build -t flask-app .
+      - docker run -d -p 5000:5000 flask-app
+    agents:
+      queue: "default"
+
+  - label: "Deploy to AWS using Terraform"
+    command:
+      - terraform init
+      - terraform apply -auto-approve
